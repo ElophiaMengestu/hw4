@@ -15,6 +15,6 @@ class EntriesController < ApplicationController
     redirect_to "/places/#{@entry["place_id"]}"
   end
   def index
-    @entries = Entry.where(user_id: session[:user_id]) # ✅ Only show user's own entries
+    @entries = Entry.where(user_id: session[:user_id])
   end
 end
