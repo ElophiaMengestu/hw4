@@ -1,12 +1,6 @@
+<h1>Sign Up</h1>
 
-<h1>New User Account</h1>
-
-<%= form_with url: "/users", method: "post", local: true do |f| %>
-  <div class="mb-3">
-    <%= f.label :username, class: "form-label" %>
-    <%= f.text_field :username, class: "form-control" %>
-  </div>
-
+<%= form_with url: "/signup", method: "post", local: true do |f| %>
   <div class="mb-3">
     <%= f.label :email, class: "form-label" %>
     <%= f.email_field :email, class: "form-control" %>
@@ -17,5 +11,6 @@
     <%= f.password_field :password, class: "form-control" %>
   </div>
 
-  <%= f.submit "Signup", class: "btn btn-primary" %>
+  <%= f.submit "Sign Up", class: "btn btn-primary" %>
 <% end %>
+
